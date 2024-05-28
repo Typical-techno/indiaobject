@@ -21,7 +21,7 @@ function Footer() {
                   </span>
                   India
                   <span className="text-blue-500 flex">
-                    <img src={logo} height={50} width={50} className="mt-1" />{" "}
+                    <img src={logo} height={50} width={50} className="mt-1" />
                   </span>
                 </p>
               </button>
