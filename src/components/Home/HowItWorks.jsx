@@ -2,7 +2,7 @@ import React from "react";
 
 function HowItWorks() {
   return (
-    <div className="flex w-11/12 h-screen px-24 justify-center">
+    <div className="flex w-11/12 h-full py-24 px-24 justify-center">
       <div className="flex flex-col space-y-16 w-full">
         <div className="space-y-16 flex flex-col text-center">
           <div className="space-y-8 text-left">

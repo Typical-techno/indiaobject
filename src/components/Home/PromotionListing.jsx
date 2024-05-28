@@ -1,10 +1,10 @@
 import React from "react";
-import promotionListingData from "../data/promotionListingData";
+import promotionListingData from "../../data/promotionListingData";
 import { Link } from "react-router-dom";
 
 function PromotionListing() {
   return (
-    <div className="flex w-11/12 h-screen px-24 justify-center">
+    <div className="flex w-11/12 h-full py-24 px-24 justify-center">
       <div className="flex flex-col space-y-16">
         <div className="space-y-16 w-full flex flex-col items-center justify-center text-center">
           <div className="space-y-8 text-left w-full">
@@ -22,7 +22,7 @@ function PromotionListing() {
               <div className="border border-black overflow-hidden rounded-xl hover:scale-110 duration-300 hover:shadow-2xl mx-8">
                 <div className="overflow-hidden">
                   <img
-                    src={require(`../assets/images/${items.image}`)}
+                    src={require(`../../assets/images/${items.image}`)}
                     height={300}
                     width={300}
                     alt="shop"
