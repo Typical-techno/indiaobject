@@ -4,6 +4,7 @@ import Footer from "./components/default/Footer";
 import Hero from "./components/Hero";
 import Categories from "./components/Categories";
 import PromotionListing from "./components/PromotionListing";
+import HowItWorks from "./components/HowItWorks";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Hero />
         <Categories />
         <PromotionListing />
+        <HowItWorks />
       </header>
       <Footer />
     </div>
