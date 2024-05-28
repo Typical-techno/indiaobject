@@ -4,7 +4,7 @@ import categoriesItems from "../data/categories";
 
 function Categories() {
   return (
-    <div className="flex w-11/12 h-full py-36 px-24 items-center">
+    <div className="flex w-11/12 h-screen px-24 items-center">
       <div className="space-y-16 w-full">
         <div className="space-y-12">
           <p className="text-5xl font-bold text-left drop-shadow-xl">Popular Categories</p>

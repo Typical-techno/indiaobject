@@ -51,7 +51,7 @@ function Navbar() {
             <button>
               <p>
                 <span className="text-blue-500"><span className="text-4xl"><i className="fi fi-rr-globe"></i></span>bject</span>India
-                <span className="text-blue-500">.</span>
+                <span className="text-blue-500">{"{}"}</span>
               </p>
             </button>
           </Link>

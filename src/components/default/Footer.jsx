@@ -19,7 +19,7 @@ function Footer() {
                     bject
                   </span>
                   India
-                  <span className="text-blue-500">.</span>
+                  <span className="text-blue-500">{"{}"}</span>
                 </p>
               </button>
             </Link>
