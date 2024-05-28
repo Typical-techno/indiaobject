@@ -28,7 +28,7 @@ function Hero() {
   ];
 
   return (
-    <div className="flex w-11/12 h-full py-36 px-24 relative items-center">
+    <div className="flex w-11/12 h-full py-32 px-24 relative items-center">
       <div className="space-y-16 z-20">
         <div className="space-y-12">
           <p className="text-5xl font-bold text-left">
