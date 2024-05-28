@@ -50,7 +50,7 @@ function Navbar() {
           <Link to="/">
             <button>
               <p>
-                <span className="text-blue-500">ER</span>ohtak
+                <span className="text-blue-500">Object</span>India
                 <span className="text-blue-500">.</span>
               </p>
             </button>
