@@ -25,7 +25,7 @@ function Footer() {
                       src={logo}
                       height={50}
                       width={50}
-                      alt="logo image"
+                      alt="logo"
                       className="mt-1"
                     />
                   </span>

@@ -90,7 +90,7 @@ function Hero() {
         </div>
       </div>
       <div className="z-10 absolute right-0 bottom-24">
-        <img src={img2} height={900} width={900} alt="Background Image"/>
+        <img src={img2} height={900} width={900} alt="Background"/>
       </div>
     </div>
   );

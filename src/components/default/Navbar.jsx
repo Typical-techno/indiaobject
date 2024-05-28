@@ -52,7 +52,7 @@ function Navbar() {
             <button>
               <p className="flex items-center">
                 <span className="text-blue-500"><span className="text-4xl"><i className="fi fi-rr-globe"></i></span>bject</span>India
-                <span className="text-blue-500"><img src={logo} height={50} width={50} alt="logo image" className="mt-1" /></span>
+                <span className="text-blue-500"><img src={logo} height={50} width={50} alt="logo" className="mt-1" /></span>
               </p>
             </button>
           </Link>
