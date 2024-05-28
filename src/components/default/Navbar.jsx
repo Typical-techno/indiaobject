@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../../assets/images/objectindia-logo-main.png"
 
 function Navbar() {
   const navItems = [
@@ -49,9 +50,9 @@ function Navbar() {
         <div className="text-5xl font-bold">
           <Link to="/">
             <button>
-              <p>
+              <p className="flex items-center">
                 <span className="text-blue-500"><span className="text-4xl"><i className="fi fi-rr-globe"></i></span>bject</span>India
-                <span className="text-blue-500">{"{}"}</span>
+                <span className="text-blue-500"><img src={logo} height={50} width={50} className="mt-1" /></span>
               </p>
             </button>
           </Link>
