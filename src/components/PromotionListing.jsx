@@ -25,6 +25,7 @@ function PromotionListing() {
                     src={require(`../assets/images/${items.image}`)}
                     height={300}
                     width={300}
+                    alt="shop image"
                   />
                   {/* <p className="text-xl font-semibold">SJ</p> */}
                 </div>
