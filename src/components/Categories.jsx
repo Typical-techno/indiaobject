@@ -21,7 +21,7 @@ function Categories() {
                 <button className="p-8">
                   <Link to={`/${filteredItems.link}`}>
                     <div
-                      className={`w-full h-full rounded-xl p-4 space-y-3 hover:bg-gray-100 hover:text-blue-500 duration-150 hover:${filteredItems.hover}`}
+                      className={`w-full h-full rounded-xl p-4 space-y-3 hover:bg-gray-100 hover:text-blue-500 duration-150 hover:scale-110 hover:${filteredItems.hover}`}
                     >
                       <p className="text-4xl items-start">
                         <i class={`fi ${filteredItems.icon}`}></i>

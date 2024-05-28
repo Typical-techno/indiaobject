@@ -1,11 +1,11 @@
 import React from "react";
-import img from "../assets/images/hero-vector.jpg";
+import promotionListingData from "../data/promotionListingData";
 
 function PromotionListing() {
   return (
     <div className="flex w-11/12 h-full py-36 px-24">
-      <div className="space-y-16 w-full text-center">
-        <div className="space-y-8 justify-center items-center flex flex-col">
+      <div className="space-y-16 w-full flex flex-col items-center justify-center text-center">
+        <div className="space-y-8 text-left w-full">
           <p className="text-5xl font-bold drop-shadow-xl">Featured Listing</p>
           <p className="text-xl font-bold">
             <span className="text-blue-500">Explore</span> the gretes places in
@@ -13,12 +13,58 @@ function PromotionListing() {
             <span className="text-blue-500">disappointed.</span>
           </p>
         </div>
-        <div className="border border-black p-4 rounded-xl">
-          <div className="border w-fit">
-            <img src={img} height={250} width={250} />
-            <div className="bg-blue-500 w-fit p-4 rounded-full border border-black"><p className="text-xl font-semibold">SJ</p></div>
-          </div>
-        </div>
+        <button className="w-fit grid grid-cols-4">
+          {promotionListingData.map((items) => (
+            <div className="border border-black overflow-hidden rounded-xl hover:scale-110 duration-300 hover:shadow-2xl mx-8">
+              <div className="overflow-hidden">
+                <img src={require(`../assets/images/${items.image}`)} height={300} width={300} />
+                {/* <p className="text-xl font-semibold">SJ</p> */}
+              </div>
+              <div className="space-y-4">
+                <div className="px-4 py-2">
+                  <div className="text-left py-2">
+                    <p className="text-3xl font-semibold">{items.name}</p>
+                  </div>
+                  <div className="text-base font-semibold  text-gray-500 text-left flex flex-col justify-center gap-2 px-4">
+                    <p>
+                      <span className="p-2">
+                        <i className={`fi ${items.locationIcon}`}></i>
+                      </span>{" "}
+                      {items.location}
+                    </p>
+                    <p>
+                      <span className="p-2">
+                        <i className={`fi ${items.phoneIcon}`}></i>
+                      </span>
+                      {items.phone}
+                    </p>
+                    <p>
+                      <span className="p-2">
+                        <i className={`fi ${items.locationIcon}`}></i>
+                      </span>{" "}
+                      {items.location}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex border-t-2 items-center text-gray-500 justify-center">
+                  <div className="text-base font-semibold items-center p-2 gap-2 flex">
+                    <p>{items.ratingPerson} Rating /</p>
+                    <span className="bg-blue-500 text-white rounded-lg p-1">
+                      {items.rating}
+                    </span>
+                  </div>
+                  {"|"}
+                  <div className="text-base font-semibold items-center p-2 gap-2 flex">
+                    <span className="rounded-lg p-1 mt-1">
+                      <i className={`fi ${items.locationIcon}`}></i>
+                    </span>
+                    <p>/ {items.category}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </button>
       </div>
     </div>
   );

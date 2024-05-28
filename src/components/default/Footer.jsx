@@ -12,7 +12,7 @@ function Footer() {
           <Link to="/">
             <button className="text-5xl font-bold">
               <p>
-                <span className="text-blue-500">Object</span>India
+                <span className="text-blue-500"><span className="text-4xl"><i className="fi fi-rr-globe"></i></span>bject</span>India
                 <span className="text-blue-500">.</span>
               </p>
             </button>
