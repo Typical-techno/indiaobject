@@ -2,7 +2,7 @@ const categoriesItems = [
   {
     id: 1,
     label: "Advocate Lawyers",
-    link: "categories?c=advocate-lawyers",
+    category: "advocate-lawyers",
     icon: "fi-rr-lawyer-man",
     hover: "p-12",
     count: 17,
@@ -11,7 +11,7 @@ const categoriesItems = [
   {
     id: 2,
     label: "Bakery",
-    link: "categories?c=bakery",
+    category: "bakery",
     icon: "fi-rr-cake-wedding",
     hover: "p-12",
     count: 17,
@@ -20,7 +20,7 @@ const categoriesItems = [
   {
     id: 3,
     label: "Banks",
-    link: "categories?c=banks",
+    category: "banks",
     icon: "fi-rr-bank",
     hover: "p-12",
     count: 17,
@@ -29,7 +29,7 @@ const categoriesItems = [
   {
     id: 4,
     label: "Banquets Hall",
-    link: "categories?c=banquets-hall",
+    category: "banquets-hall",
     icon: "fi-rr-glass-cheers",
     hover: "p-12",
     count: 17,
@@ -38,7 +38,7 @@ const categoriesItems = [
   {
     id: 5,
     label: "Book Stationery Shops",
-    link: "categories?c=book-stationery-shops",
+    category: "book-stationery-shops",
     icon: "fi-rr-pencil-ruler",
     hover: "p-12",
     count: 17,
@@ -47,7 +47,7 @@ const categoriesItems = [
   {
     id: 6,
     label: "Boutiques",
-    link: "categories?c=boutiques",
+    category: "boutiques",
     icon: "fi-rr-woman-head",
     hover: "p-12",
     count: 17,
@@ -56,7 +56,7 @@ const categoriesItems = [
   {
     id: 7,
     label: "Building Material Dealers",
-    link: "categories?c=building-material-dealers",
+    category: "building-material-dealers",
     icon: "fi-rr-building",
     hover: "p-12",
     count: 17,
@@ -65,7 +65,7 @@ const categoriesItems = [
   {
     id: 8,
     label: "CCTV Dealers",
-    link: "categories?c=cctv-dealers",
+    category: "cctv-dealers",
     icon: "fi-rr-camera-cctv",
     hover: "p-12",
     count: 17,
@@ -74,7 +74,7 @@ const categoriesItems = [
   {
     id: 9,
     label: "Chartered Accountant",
-    link: "categories?c=chartered-accountant",
+    category: "chartered-accountant",
     icon: "fi-rr-chart-histogram",
     hover: "p-12",
     count: 17,
@@ -83,7 +83,7 @@ const categoriesItems = [
   {
     id: 10,
     label: "Clothes",
-    link: "categories?c=clothes",
+    category: "clothes",
     icon: "fi-rr-shirt-long-sleeve",
     hover: "p-12",
     count: 17,
@@ -92,7 +92,7 @@ const categoriesItems = [
   {
     id: 11,
     label: "Computer Center",
-    link: "categories?c=computer-center",
+    category: "computer-center",
     icon: "fi-rr-display-code",
     hover: "p-12",
     count: 17,
@@ -101,7 +101,7 @@ const categoriesItems = [
   {
     id: 12,
     label: "Cyber Cafe",
-    link: "categories?c=cyber-cafe",
+    category: "cyber-cafe",
     icon: "fi-rr-globe",
     hover: "p-12",
     count: 17,
@@ -110,7 +110,7 @@ const categoriesItems = [
   {
     id: 13,
     label: "Digital Marketing",
-    link: "categories?c=digital-marketing",
+    category: "digital-marketing",
     icon: "fi-rr-megaphone",
     hover: "p-12",
     count: 17,
@@ -119,7 +119,7 @@ const categoriesItems = [
   {
     id: 14,
     label: "Education",
-    link: "categories?c=education",
+    category: "education",
     icon: "fi-rr-graduation-cap",
     hover: "p-12",
     count: 17,
@@ -128,7 +128,7 @@ const categoriesItems = [
   {
     id: 15,
     label: "Electrical Shops",
-    link: "categories?c=electrical-shops",
+    category: "electrical-shops",
     icon: "fi-rr-plug-connection",
     hover: "p-12",
     count: 17,
@@ -137,7 +137,7 @@ const categoriesItems = [
   {
     id: 16,
     label: "Electronics",
-    link: "categories?c=electronics",
+    category: "electronics",
     icon: "fi-rr-computer-speaker",
     hover: "p-12",
     count: 17,
@@ -146,7 +146,7 @@ const categoriesItems = [
   {
     id: 17,
     label: "Fast Food",
-    link: "categories?c=fast-food",
+    category: "fast-food",
     icon: "fi-rr-hamburger-soda",
     hover: "p-12",
     count: 17,
@@ -155,7 +155,7 @@ const categoriesItems = [
   {
     id: 18,
     label: "Female Clothing",
-    link: "categories?c=female-clothing",
+    category: "female-clothing",
     icon: "fi-rr-shirt-tank-top",
     hover: "p-12",
     count: 17,
@@ -164,7 +164,7 @@ const categoriesItems = [
   {
     id: 19,
     label: "Garages & Repair",
-    link: "categories?c=garages-and-repair",
+    category: "garages-and-repair",
     icon: "fi-rr-garage-car",
     hover: "p-12",
     count: 17,
@@ -173,7 +173,7 @@ const categoriesItems = [
   {
     id: 20,
     label: "Furniture Shops",
-    link: "categories?c=furniture-shops",
+    category: "furniture-shops",
     icon: "fi-rr-sofa",
     hover: "p-12",
     count: 17,
@@ -182,7 +182,7 @@ const categoriesItems = [
   {
     id: 21,
     label: "General Stores",
-    link: "categories?c=general-stores",
+    category: "general-stores",
     icon: "fi-rr-store-alt",
     hover: "p-12",
     count: 17,
@@ -191,7 +191,7 @@ const categoriesItems = [
   {
     id: 22,
     label: "Gents Tailor",
-    link: "categories?c=gents-tailor",
+    category: "gents-tailor",
     icon: "fi-rr-tape",
     hover: "p-12",
     count: 17,
@@ -200,7 +200,7 @@ const categoriesItems = [
   {
     id: 23,
     label: "Glass Dealers",
-    link: "categories?c=glass-dealers",
+    category: "glass-dealers",
     icon: "fi-rr-square",
     hover: "p-12",
     count: 17,
@@ -209,7 +209,7 @@ const categoriesItems = [
   {
     id: 24,
     label: "Hardware Shop",
-    link: "categories?c=hardware-shop",
+    category: "hardware-shop",
     icon: "fi-rr-tools",
     hover: "p-12",
     count: 17,
@@ -218,7 +218,7 @@ const categoriesItems = [
   {
     id: 25,
     label: "Hotel",
-    link: "categories?c=hotel",
+    category: "hotel",
     icon: "fi-rr-hotel",
     hover: "p-12",
     count: 17,
@@ -227,7 +227,7 @@ const categoriesItems = [
   {
     id: 26,
     label: "Industry",
-    link: "categories?c=industry",
+    category: "industry",
     icon: "fi-rr-industry-alt",
     hover: "p-12",
     count: 17,
@@ -236,7 +236,7 @@ const categoriesItems = [
   {
     id: 27,
     label: "Institutes",
-    link: "categories?c=Institutes",
+    category: "Institutes",
     icon: "fi-rr-people-roof",
     hover: "p-12",
     count: 17,
@@ -245,7 +245,7 @@ const categoriesItems = [
   {
     id: 28,
     label: "Invertor Dealers",
-    link: "categories?c=invertor-dealers",
+    category: "invertor-dealers",
     icon: "fi-rr-car-battery",
     hover: "p-12",
     count: 17,
@@ -254,7 +254,7 @@ const categoriesItems = [
   {
     id: 29,
     label: "Juice Shops",
-    link: "categories?c=juice-shops",
+    category: "juice-shops",
     icon: "fi-rr-martini-glass-citrus",
     hover: "p-12",
     count: 17,
@@ -263,7 +263,7 @@ const categoriesItems = [
   {
     id: 30,
     label: "Medical Services",
-    link: "categories?c=medical-services",
+    category: "medical-services",
     icon: "fi-rr-stethoscope",
     hover: "p-12",
     count: 17,
@@ -272,7 +272,7 @@ const categoriesItems = [
   {
     id: 31,
     label: "Mobile",
-    link: "categories?c=mobile",
+    category: "mobile",
     icon: "fi-rr-mobile-notch",
     hover: "p-12",
     count: 17,
@@ -281,7 +281,7 @@ const categoriesItems = [
   {
     id: 32,
     label: "NGO",
-    link: "categories?c=ngo",
+    category: "ngo",
     icon: "fi-rr-building-ngo",
     hover: "p-12",
     count: 17,
@@ -290,7 +290,7 @@ const categoriesItems = [
   {
     id: 33,
     label: "Parlour & Saloon",
-    link: "categories?c=parlour-and-saloon",
+    category: "parlour-and-saloon",
     icon: "fi-rr-barber-shop",
     hover: "p-12",
     count: 17,
@@ -299,7 +299,7 @@ const categoriesItems = [
   {
     id: 34,
     label: "Properties",
-    link: "categories?c=properties",
+    category: "properties",
     icon: "fi-rr-house-user",
     hover: "p-12",
     count: 17,
@@ -308,7 +308,7 @@ const categoriesItems = [
   {
     id: 35,
     label: "Rental Services",
-    link: "categories?c=rental-services",
+    category: "rental-services",
     icon: "fi-rr-rent",
     hover: "p-12",
     count: 17,
@@ -317,7 +317,7 @@ const categoriesItems = [
   {
     id: 36,
     label: "Restaurants",
-    link: "categories?c=restaurants",
+    category: "restaurants",
     icon: "fi-rr-restaurant",
     hover: "p-12",
     count: 17,
@@ -326,7 +326,7 @@ const categoriesItems = [
   {
     id: 37,
     label: "Schools",
-    link: "categories?c=schools",
+    category: "schools",
     icon: "fi-rr-school",
     hover: "p-12",
     count: 17,
@@ -335,7 +335,7 @@ const categoriesItems = [
   {
     id: 38,
     label: "Spare Parts",
-    link: "categories?c=spare-parts",
+    category: "spare-parts",
     icon: "fi-rr-gears",
     hover: "p-12",
     count: 17,
@@ -344,7 +344,7 @@ const categoriesItems = [
   {
     id: 39,
     label: "Sports",
-    link: "categories?c=sports",
+    category: "sports",
     icon: "fi-rr-trophy-star",
     hover: "p-12",
     count: 17,
@@ -353,7 +353,7 @@ const categoriesItems = [
   {
     id: 40,
     label: "Startups",
-    link: "categories?c=startups",
+    category: "startups",
     icon: "fi-rr-lightbulb-dollar",
     hover: "p-12",
     count: 17,
@@ -362,7 +362,7 @@ const categoriesItems = [
   {
     id: 41,
     label: "Tile Dealers",
-    link: "categories?c=tile-dealers",
+    category: "tile-dealers",
     icon: "fi-tr-floor-alt",
     hover: "p-12",
     count: 17,
@@ -371,7 +371,7 @@ const categoriesItems = [
   {
     id: 42,
     label: "Travel Agents",
-    link: "categories?c=travel-agents",
+    category: "travel-agents",
     icon: "fi-rr-track",
     hover: "p-12",
     count: 17,
@@ -380,7 +380,7 @@ const categoriesItems = [
   {
     id: 43,
     label: "Bike Dealer & Repair",
-    link: "categories?c=bike-dealer-and-repair",
+    category: "bike-dealer-and-repair",
     icon: "fi-rr-motorcycle",
     hover: "p-12",
     count: 17,
@@ -389,7 +389,7 @@ const categoriesItems = [
   {
     id: 44,
     label: "Website Developer",
-    link: "categories?c=website-developer",
+    category: "website-developer",
     icon: "fi-rr-site-alt",
     hover: "p-12",
     count: 17,
@@ -398,7 +398,7 @@ const categoriesItems = [
   {
     id: 45,
     label: "App Developer",
-    link: "categories?c=app-developer",
+    category: "app-developer",
     icon: "fi-brands-app-store-ios",
     hover: "p-12",
     count: 17,
@@ -406,4 +406,52 @@ const categoriesItems = [
   },
 ];
 
-export default categoriesItems;
+const category = [
+  "advocate-lawyers",
+  "bakery",
+  "banks",
+  "banquets-hall",
+  "book-stationery-shops",
+  "boutiques",
+  "building-material-dealers=",
+  "cctv-dealers",
+  "chartered-accountant",
+  "clothes",
+  "computer-center",
+  "cyber-cafe",
+  "digital-marketing",
+  "education",
+  "electrical-shops",
+  "electronics",
+  "fast-food",
+  "female-clothing",
+  "garages-and-repair",
+  "furniture-shops",
+  "general-stores",
+  "gents-tailor",
+  "glass-dealers",
+  "hardware-shop",
+  "hotel",
+  "industry",
+  "Institutes",
+  "invertor-dealers",
+  "juice-shops",
+  "medical-services",
+  "mobile",
+  "ngo",
+  "parlour-and-saloon",
+  "properties",
+  "rental-services",
+  "restaurants",
+  "schools",
+  "spare-parts",
+  "sports",
+  "startups",
+  "tile-dealers",
+  "travel-agents",
+  "bike-dealer-and-repair",
+  "website-developer",
+  "app-developer",
+];
+
+export { categoriesItems, category };

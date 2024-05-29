@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import DropdownFilter from "./DropdownFilter";
 
 function SearchBox() {
+  const [keyword, setKeyword] = useState("");
+  const [category, setCategory] = useState("");
+  const [where, setWhere] = useState("");
+
   const searchItems = [
     {
       id: "keywords",
@@ -25,24 +30,38 @@ function SearchBox() {
     },
   ];
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`Keyword: ${keyword}, Category: ${category}, Where: ${where}`);
+    // Submit form data or perform other actions with the values
+  };
+
   return (
     <form
-      onSubmit={() => {
-        alert("Form Submitted");
-      }}
-      className="border border-black bg-white flex rounded-xl shadow-2xl p-4 gap-6 justify-between"
+      onSubmit={handleSubmit}
+      className="border border-black bg-white flex rounded-xl shadow-2xl p-4 gap-4 justify-between w-full"
     >
-      {searchItems.map((items) => (
+      {searchItems.map((items, index) => (
         <label
-          className={`flex flex-col text-left text-xl font-semibold ${items.border} border-gray-400 px-2`}
+          key={index}
+          className={`flex flex-col text-left text-xl font-semibold ${items.border} border-gray-400 px-2 w-full`}
         >
           {items.label}
-          <div className="flex items-center">
-            <input
-              id={`${items.id}`}
-              placeholder={`${items.placeholder}`}
-              className="text-xl p-2 focus:outline-0"
-            ></input>
+          <div className="flex items-center w-full gap-4 border-0">
+            {/* <input placeholder={items.placeholder} className="focus:outline-none" /> */}
+            <DropdownFilter
+              placeholder={items.placeholder}
+              id={items.id}
+              onSelect={(value) => {
+                if (items.id === "keywords") {
+                  setKeyword(value);
+                } else if (items.id === "category") {
+                  setCategory(value);
+                } else if (items.id === "where") {
+                  setWhere(value);
+                }
+              }}
+            />
             <p className="mt-1">
               <i className={`fi ${items.icon}`}></i>
             </p>

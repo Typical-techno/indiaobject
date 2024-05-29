@@ -7,6 +7,7 @@ import AboutUs from "./components/About-us/AboutUs";
 import ContactUs from "./components/Contact-us/ContactUs";
 import Pricing from "./components/Pricing/Pricing";
 import Categories from "./components/Categories/Categories";
+import CategoriesSubListing from "./components/Categories/CategoriesSubListing";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/c/:categoriesId" element={<CategoriesSubListing />} />
       </Routes>
       <Footer />
     </div>

@@ -7,7 +7,7 @@ function AboutUs() {
   useEffect(() => {
     let tempName = window.location.pathname.toUpperCase().replace("/", "");
     setHeadName(tempName);
-  });
+  },[]);
   
   return (
     <div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import categoriesItems from "../../data/categories";
+import {categoriesItems} from "../../data/categories";
 
 function Categories() {
   return (
@@ -19,7 +19,7 @@ function Categories() {
               .filter((item) => item.visibleScreen === "Home")
               .map((filteredItems) => (
                 <button className="p-8">
-                  <Link to={`/${filteredItems.link}`}>
+                  <Link to={`/c/${filteredItems.category}`}>
                     <div
                       className={`w-full h-full rounded-xl p-4 space-y-3 hover:bg-gray-100 hover:text-blue-500 duration-150 hover:scale-110 hover:${filteredItems.hover}`}
                     >
