@@ -8,6 +8,7 @@ import ContactUs from "./pages/Contact-us/ContactUs";
 import Pricing from "./pages/Pricing/Pricing";
 import Categories from "./pages/Categories/Categories";
 import CategoriesSubListing from "./pages/Categories/CategoriesSubListing";
+import LoginSignup from "./pages/Login-Signup/Login_Signup";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
         <Route path="/categories" element={<Categories />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/c/:categoriesId" element={<CategoriesSubListing />} />
+        <Route path="/login" element={<LoginSignup />} />
+        <Route path="/signup" element={<LoginSignup />} />
       </Routes>
       <Footer />
     </div>
