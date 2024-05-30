@@ -32,8 +32,14 @@ function SearchBox() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Keyword: ${keyword}, Category: ${category}, Where: ${where}`);
-    // Submit form data or perform other actions with the values
+    let ref = window.location.href;
+    if (ref.includes("/c/")) {
+      let newUrl = `${category}?keyword=${keyword}&location=${where}`;
+      window.location.replace(newUrl);
+    } else {
+      let newUrl = `c/${category}?keyword=${keyword}&location=${where}`;
+      window.location.replace(newUrl);
+    }
   };
 
   return (
@@ -56,7 +62,10 @@ function SearchBox() {
                 if (items.id === "keywords") {
                   setKeyword(value);
                 } else if (items.id === "category") {
-                  setCategory(value);
+                  while (value.includes(" ")) {
+                    value = value.replace(" ", "-");
+                  }
+                  setCategory(value.toLowerCase());
                 } else if (items.id === "where") {
                   setWhere(value);
                 }

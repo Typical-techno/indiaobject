@@ -42,7 +42,7 @@ const categoriesListingData = [
     id: 3,
     name: "Rohan Mehta",
     locationIcon: "fi-bs-globe",
-    location: "Delhi",
+    location: "Gujrat",
     phoneIcon: "fi-bs-phone-call",
     phone: "+91 9123456780",
     rating: 4.0,

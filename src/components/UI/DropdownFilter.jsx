@@ -8,19 +8,22 @@ const DropdownFilter = ({ placeholder, id, onSelect }) => {
 
   const getFilteredItems = (inputValue) => {
     if (id === "keywords") {
-      return keywords.filter((item) =>
+      let newWords = keywords.filter((item) =>
         item.toLowerCase().includes(inputValue.toLowerCase())
       );
+      return newWords;
     }
     if (id === "where") {
-      return where.filter((item) =>
+      let newWords = where.filter((item) =>
         item.toLowerCase().includes(inputValue.toLowerCase())
       );
+      return newWords;
     }
     if (id === "category") {
-      return category.filter((item) =>
+      let newWords = category.filter((item) =>
         item.toLowerCase().includes(inputValue.toLowerCase())
       );
+      return newWords;
     }
     return [];
   };

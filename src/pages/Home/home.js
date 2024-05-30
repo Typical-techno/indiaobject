@@ -1,7 +1,7 @@
 import Categories from "./CategoriesHome";
 import Hero from "./Hero";
 import HowItWorks from "./HowItWorks";
-import StartListingHome from "../UI/StartListingHome";
+import StartListingHome from "../../components/UI/StartListingHome";
 import "../../App.css";
 import PromotionListing from "./PromotionListing";
 

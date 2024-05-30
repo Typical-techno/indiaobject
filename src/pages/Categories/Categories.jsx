@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import TopHeadNameBar from "../UI/TopHeadNameBar";
+import TopHeadNameBar from "../../components/UI/TopHeadNameBar";
 import { categoriesItems } from "../../data/categories";
 import { Link } from "react-router-dom";
-import SearchBox from "../UI/SearchBox";
+import SearchBox from "../../components/UI/SearchBox";
 
 function Categories() {
   const [headName, setHeadName] = useState();

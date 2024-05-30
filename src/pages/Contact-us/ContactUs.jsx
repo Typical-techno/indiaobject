@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import TopHeadNameBar from "../UI/TopHeadNameBar";
+import TopHeadNameBar from "../../components/UI/TopHeadNameBar";
 
 function ContactUs() {
   const [headName, setHeadName] = useState();

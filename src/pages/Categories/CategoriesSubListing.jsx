@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import TopHeadNameBarCategories from "../UI/TopHeadNameBarCategories";
+import TopHeadNameBarCategories from "../../components/UI/TopHeadNameBarCategories";
 import CategoriesListingItems from "./CategoriesListingItems";
-import SearchBox from "../UI/SearchBox";
+import SearchBox from "../../components/UI/SearchBox";
 
 function CategoriesSubListing() {
   const [headName, setHeadName] = useState();

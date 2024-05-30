@@ -1,6 +1,6 @@
 import React from "react";
 import img2 from "../../assets/images/hero-vector-2.jpg";
-import SearchBox from "../UI/SearchBox";
+import SearchBox from "../../components/UI/SearchBox";
 
 function Hero() {
   return (

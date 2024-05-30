@@ -1,15 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import categoriesListingData from "../../data/categoriesListingData";
 
-function CategoriesListingItems({categoryName}) {
+function CategoriesListingItems({ categoryName }) {
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    const params = new URLSearchParams(url.search);
+    const keyword = params.get("keyword");
+    const location = params.get("location");
+    console.log(keyword + location);
+  }, []);
+
   return (
     <div className="justify-center flex p-8">
-      <div className="w-fit grid grid-cols-4">
+      <div className="w-fit grid grid-cols-4 gap-12">
         {categoriesListingData
-          .filter((item) => item.category === categoryName)
+          .filter(
+            (item) =>
+              item.category === categoryName ||
+              window.location.href.includes("all-categories")
+          )
           .map((items) => (
             <button>
-              <div className="border border-black overflow-hidden rounded-xl hover:scale-110 duration-300 hover:shadow-2xl mx-8">
+              <div className="border border-black overflow-hidden rounded-xl hover:scale-110 duration-300 hover:shadow-2xl">
                 <div className="overflow-hidden">
                   <img
                     src={require(`../../assets/images/${items.image}`)}

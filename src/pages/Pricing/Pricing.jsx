@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import TopHeadNameBar from "../UI/TopHeadNameBar";
+import TopHeadNameBar from "../../components/UI/TopHeadNameBar";
 
-function AboutUs() {
+function Pricing() {
   const [headName, setHeadName] = useState();
 
   useEffect(() => {
@@ -16,4 +16,4 @@ function AboutUs() {
   );
 }
 
-export default AboutUs;
+export default Pricing;
