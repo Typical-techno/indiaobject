@@ -45,7 +45,7 @@ function SearchBox() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="border border-black bg-white flex flex-col xl:flex-row rounded-xl shadow-2xl p-4 gap-4 justify-between w-full"
+      className="border border-black bg-white flex flex-col xl:flex-row rounded-xl shadow-2xl p-4 gap-4 justify-between w-full z-10"
     >
       {searchItems.map((items, index) => (
         <label
@@ -78,7 +78,7 @@ function SearchBox() {
         </label>
       ))}
       <button type="submit" className="bg-blue-500 rounded-xl p-4 text-white">
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center justify-between">
           <p className="text-xl font-semibold">Search</p>
           <p className="text-base mt-1">
             <i class="fi fi-br-search"></i>

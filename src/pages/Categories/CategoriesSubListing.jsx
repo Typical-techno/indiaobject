@@ -19,7 +19,7 @@ function CategoriesSubListing() {
     <div>
       <TopHeadNameBarCategories headName={headName} />
       <div className="flex justify-center my-12">
-        <div className="w-8/12">
+        <div>
           <SearchBox />
         </div>
       </div>

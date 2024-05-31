@@ -17,19 +17,23 @@ function App() {
 
   return (
     <div className="App">
-      {!hideNavbarPaths.includes(location.pathname) && <Navbar />}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/categories" element={<Categories />} />
-        <Route path="/pricing" element={<Pricing />} />
-        <Route path="/c/:categoriesId" element={<CategoriesSubListing />} />
-        <Route path="/login" element={<LoginSignup />} />
-        <Route path="/signup" element={<LoginSignup />} />
-        <Route path="*" element={<Navigate to="/404" replace/>} />
-        <Route path="/404" element={<NotFound />} />
-      </Routes>
+      <div className="fixed z-20">
+        {!hideNavbarPaths.includes(location.pathname) && <Navbar />}
+      </div>
+      <div className="z-10 py-20">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/c/:categoriesId" element={<CategoriesSubListing />} />
+          <Route path="/login" element={<LoginSignup />} />
+          <Route path="/signup" element={<LoginSignup />} />
+          <Route path="*" element={<Navigate to="/404" replace />} />
+          <Route path="/404" element={<NotFound />} />
+        </Routes>
+      </div>
       {!hideNavbarPaths.includes(location.pathname) && <Footer />}
     </div>
   );

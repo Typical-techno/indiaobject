@@ -4,7 +4,7 @@ import SearchBox from "../../components/UI/SearchBox";
 
 function Hero() {
   return (
-    <div className="flex w-11/12 h-full py-32 px-2 md:px-24 relative items-center justify-center xl:justify-normal">
+    <div className="flex w-11/12 h-full py-36 px-2 md:px-24 relative items-center justify-center xl:justify-normal z-10">
       <div className="space-y-16 z-20">
         <div className="space-y-12">
           <p className="text-5xl font-bold text-left">
@@ -18,7 +18,7 @@ function Hero() {
             <span className="text-blue-500">.</span>
           </p>
         </div>
-        <div className="space-y-4">
+        <div className="space-y-4 z-10">
           <SearchBox />
           <div>
             <p className="text-base font-semibold text-left p-4">

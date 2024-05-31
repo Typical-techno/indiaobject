@@ -16,25 +16,22 @@ function Categories() {
     <div>
       <TopHeadNameBar headName={headName} />
       <div className="flex justify-center my-12">
-        <div className="w-8/12">
+        <div>
           <SearchBox />
         </div>
       </div>
-      {/* {categoriesItems.map((items) => (
-        <p>{items.category}</p>
-      ))} */}
       <div className="w-full flex justify-center">
-        <div className="grid grid-cols-6 w-10/12">
+        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 w-10/12">
           {categoriesItems.map((filteredItems) => (
-            <button className="p-8">
+            <button className="p-2 md:p-8">
               <Link to={`/c/${filteredItems.category}`}>
                 <div
-                  className={`w-full h-full rounded-xl p-4 space-y-3 hover:bg-gray-100 hover:text-blue-500 duration-150 hover:scale-110 hover:${filteredItems.hover}`}
+                  className={`w-full h-full flex flex-col rounded-xl p-4 space-y-3 hover:bg-gray-100 hover:text-blue-500 duration-150 hover:scale-110 hover:${filteredItems.hover}`}
                 >
-                  <p className="text-4xl items-start">
+                  <p className="text-4xl items-center justify-center  h-full flex">
                     <i class={`fi ${filteredItems.icon}`}></i>
                   </p>
-                  <p className="text-xl font-semibold items-center">
+                  <p className="text-sm md:text-xl font-semibold items-center">
                     {filteredItems.label}
                   </p>
                   <p className="text-base text-gray-500 font-semibold items-end">
