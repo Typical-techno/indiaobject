@@ -4,7 +4,7 @@ import SearchBox from "../../components/UI/SearchBox";
 
 function Hero() {
   return (
-    <div className="flex w-11/12 h-full py-32 px-24 relative items-center">
+    <div className="flex w-11/12 h-full py-32 px-2 md:px-24 relative items-center justify-center xl:justify-normal">
       <div className="space-y-16 z-20">
         <div className="space-y-12">
           <p className="text-5xl font-bold text-left">
@@ -31,7 +31,7 @@ function Hero() {
           </div>
         </div>
       </div>
-      <div className="z-10 absolute right-0 bottom-24">
+      <div className="z-10 absolute right-0 bottom-24 hidden xl:flex">
         <img src={img2} height={900} width={900} alt="Background" />
       </div>
     </div>

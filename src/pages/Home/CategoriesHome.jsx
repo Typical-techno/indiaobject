@@ -4,7 +4,7 @@ import {categoriesItems} from "../../data/categories";
 
 function Categories() {
   return (
-    <div className="flex w-11/12 h-full py-24 px-24 items-center">
+    <div className="flex w-11/12 h-full py-24 px-2 md:px-24 items-center">
       <div className="space-y-16 w-full">
         <div className="space-y-12">
           <p className="text-5xl font-bold text-left drop-shadow-xl">Popular Categories</p>
@@ -14,7 +14,7 @@ function Categories() {
           </p>
         </div>
         <div>
-          <div className="grid grid-cols-6 w-full">
+          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 w-full">
             {categoriesItems
               .filter((item) => item.visibleScreen === "Home")
               .map((filteredItems) => (

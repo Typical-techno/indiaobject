@@ -45,15 +45,15 @@ function SearchBox() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="border border-black bg-white flex rounded-xl shadow-2xl p-4 gap-4 justify-between w-full"
+      className="border border-black bg-white flex flex-col xl:flex-row rounded-xl shadow-2xl p-4 gap-4 justify-between w-full"
     >
       {searchItems.map((items, index) => (
         <label
           key={index}
-          className={`flex flex-col text-left text-xl font-semibold ${items.border} border-gray-400 px-2 w-full`}
+          className="flex flex-col text-left text-xl font-semibold border-l-2 xl:border-0 border-gray-400 px-2 w-full"
         >
           {items.label}
-          <div className="flex items-center w-full gap-4 border-0">
+          <div className="flex items-center w-full gap-4 border-0 justify-between">
             {/* <input placeholder={items.placeholder} className="focus:outline-none" /> */}
             <DropdownFilter
               placeholder={items.placeholder}

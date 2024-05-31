@@ -97,6 +97,8 @@ function LoginSignup() {
     );
   }
 
+  console.log(email + fullName);
+
   return (
     <div className="bg-slate-900 flex items-center justify-center h-screen">
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full shadow-slate-500">
@@ -179,10 +181,10 @@ function LoginSignup() {
             .
           </p>
           <p className="text-gray-600 text-xs text-center mt-4">
-            By clicking Register, you agree to accept Apex Financial's
-            <a href="#" className="text-blue-500 hover:underline">
+            By clicking Register, you agree to accept Object India's<br></br>
+            <Link to={'/terms-and-condition'} className="text-blue-500 hover:underline">
               Terms and Conditions
-            </a>
+            </Link>
             .
           </p>
         </form>

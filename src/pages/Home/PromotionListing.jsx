@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function PromotionListing() {
   return (
-    <div className="flex w-11/12 h-full py-24 px-24 justify-center">
+    <div className="flex w-11/12 h-full py-24 px-2 md:px-24 justify-center">
       <div className="flex flex-col space-y-16">
         <div className="space-y-16 w-full flex flex-col items-center justify-center text-center">
           <div className="space-y-8 text-left w-full">
@@ -17,7 +17,7 @@ function PromotionListing() {
               <span className="text-blue-500">disappointed.</span>
             </p>
           </div>
-          <button className="w-fit grid grid-cols-4">
+          <button className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 xl:gap-4">
             {promotionListingData.map((items) => (
               <div className="border border-black overflow-hidden rounded-xl hover:scale-110 duration-300 hover:shadow-2xl mx-8">
                 <div className="overflow-hidden">

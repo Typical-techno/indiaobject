@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import Navbar from "./components/default/Navbar";
 import Footer from "./components/default/Footer";
 import Home from "./pages/Home/home";
@@ -9,11 +9,15 @@ import Pricing from "./pages/Pricing/Pricing";
 import Categories from "./pages/Categories/Categories";
 import CategoriesSubListing from "./pages/Categories/CategoriesSubListing";
 import LoginSignup from "./pages/Login-Signup/Login_Signup";
+import NotFound from "./pages/NotFound";
 
 function App() {
+  const location = useLocation();
+  const hideNavbarPaths = ["/login", "/signup", "/404"];
+
   return (
     <div className="App">
-      <Navbar />
+      {!hideNavbarPaths.includes(location.pathname) && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
@@ -23,8 +27,10 @@ function App() {
         <Route path="/c/:categoriesId" element={<CategoriesSubListing />} />
         <Route path="/login" element={<LoginSignup />} />
         <Route path="/signup" element={<LoginSignup />} />
+        <Route path="*" element={<Navigate to="/404" replace/>} />
+        <Route path="/404" element={<NotFound />} />
       </Routes>
-      <Footer />
+      {!hideNavbarPaths.includes(location.pathname) && <Footer />}
     </div>
   );
 }
