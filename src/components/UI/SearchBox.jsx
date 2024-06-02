@@ -77,7 +77,7 @@ function SearchBox() {
           </div>
         </label>
       ))}
-      <button type="submit" className="bg-blue-500 rounded-xl p-4 text-white">
+      <button type="submit" className="bg-blue-500 rounded-xl p-4 text-white min-w-36">
         <div className="flex items-center justify-between">
           <p className="text-xl font-semibold">Search</p>
           <p className="text-base mt-1">

@@ -1,75 +1,118 @@
-import React, { useEffect, useState } from "react";
-import TopHeadNameBar from "../../components/UI/TopHeadNameBar";
+import React from "react";
 
 function ContactUs() {
-  const [headName, setHeadName] = useState();
-
-  useEffect(() => {
-    let tempName = window.location.pathname.toUpperCase().replace("/", "");
-    setHeadName(tempName);
-  }, []);
-
   return (
-    <div className="h-full">
-      <TopHeadNameBar headName={headName} />
-      <div className="flex items-center justify-center p-16 w-full h-full">
-        <div className="flex border rounded-2xl overflow-hidden border-black">
-          <div className="p-6 space-y-10 border-r-2 border-black">
-            <p className="text-8xl font-bold">
-              <span className="text-blue-500">{"<"}</span>Contact Us
-              <span className="text-blue-500">{">"}</span>
-            </p>
-            <div>
-              <form className="flex flex-col space-y-8 duration-300">
+    <div className="py-36 flex justify-center items-center">
+      <div className="flex flex-col gap-16 justify-center items-center w-full px-4 md:px-16 lg:px-36">
+        <div className="space-y-2 text-center w-full">
+          <p className="text-3xl md:text-4xl lg:text-5xl font-bold">Contact Us</p>
+          <p className="text-gray-500">
+            Feel free to contact us – submit your queries here and we will
+            listen
+          </p>
+        </div>
+        <div className="flex flex-col lg:flex-row gap-8 items-center w-full">
+          <div className="w-full lg:w-1/2">
+            <form className="flex flex-col gap-8 w-full">
+              <label
+                htmlFor="contactName"
+                className="border border-black rounded-xl flex items-center text-left px-2"
+              >
+                <p className="flex items-center gap-2">
+                  <i className="mt-1 fi fi-rs-user"></i> Name
+                </p>
                 <input
-                  placeholder="Contact Name"
-                  className="text-xl focus:text-2xl focus:outline-0 border-b-2 duration-150 px-3"
+                  name="contactName"
+                  id="contactName"
+                  className="py-3 px-2 flex-grow focus:outline-none"
                 />
-                <input
-                  placeholder="Street"
-                  className="text-xl focus:text-2xl focus:outline-0 border-b-2 duration-150 px-3"
-                />
-                <div className="flex justify-between">
+              </label>
+              <div className="flex flex-col md:flex-row gap-8 w-full">
+                <label
+                  htmlFor="contactEmail"
+                  className="border border-black rounded-xl flex items-center text-left px-2 w-full"
+                >
+                  <p className="flex items-center gap-2">
+                    <i className="mt-1 fi fi-rs-envelope"></i> Email
+                  </p>
                   <input
-                    placeholder="City"
-                    className="text-xl focus:text-2xl focus:outline-0 border-b-2 mr-4 duration-150 px-3"
+                    name="contactEmail"
+                    id="contactEmail"
+                    className="py-3 px-2 flex-grow focus:outline-none"
                   />
+                </label>
+                <label
+                  htmlFor="contactPhone"
+                  className="border border-black rounded-xl flex items-center text-left px-2 w-full"
+                >
+                  <p className="flex items-center gap-2">
+                    <i className="mt-1 fi fi-rs-phone-call"></i> Phone
+                  </p>
                   <input
-                    placeholder="Postcode"
-                    inputMode="numeric"
-                    className="text-xl focus:text-2xl focus:outline-0 border-b-2 duration-150 px-3"
+                    name="contactPhone"
+                    id="contactPhone"
+                    className="py-3 px-2 flex-grow focus:outline-none"
                   />
-                </div>
-                <input
-                  placeholder="Contact Phone"
-                  inputMode="numeric"
-                  className="text-xl focus:text-2xl focus:outline-0 border-b-2 duration-150 px-3"
+                </label>
+              </div>
+              <label
+                htmlFor="contactMessage"
+                className="border border-black rounded-xl flex flex-col text-left p-2 overflow-hidden"
+              >
+                <p className="flex items-center gap-2">
+                  <i className="mt-1 fi fi-rs-messages"></i> Message
+                </p>
+                <textarea
+                  name="contactMessage"
+                  id="contactMessage"
+                  className="focus:outline-none overflow-scroll"
+                  style={{ scrollbarWidth: "none" }}
+                  rows={11}
+                  cols={47}
                 />
-                <input
-                  placeholder="E-Mail"
-                  type="mail"
-                  className="text-xl focus:text-2xl focus:outline-0 border-b-2 duration-150 px-3"
-                />
-                <input
-                  placeholder="Let's talk about your idea"
-                  className="text-xl focus:text-2xl focus:outline-0 border-b-2 duration-150 px-3"
-                />
-                <button className="bg-blue-500 rounded p-2">
-                  <p className="text-xl font-bold">SUBMIT</p>
-                </button>
-              </form>
-            </div>
+              </label>
+              <button className="py-3 bg-blue-600 text-white font-bold rounded-xl">
+                Send Message
+              </button>
+            </form>
           </div>
-          <div>
-            <iframe
-              title="contact-map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55892.74399852038!2d76.61633495000001!3d28.88953605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d85a5414251a5%3A0x9f011cc2777a4544!2sRohtak%2C%20Haryana!5e0!3m2!1sen!2sin!4v1716916301325!5m2!1sen!2sin"
-              width="800"
-              height="600"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              className="rounded-tr-2xl rounded-br-2xl"
-            ></iframe>
+          <div className="flex flex-col gap-10 w-full lg:w-1/2">
+            <div className="px-8 text-center lg:text-left h-full">
+              <div className="px-12 py-6 bg-blue-700 rounded-2xl h-full">
+                <p className="flex items-center space-x-4 justify-center lg:justify-start w-full">
+                  <i className="fi fi-rs-phone-call bg-white rounded-xl text-blue-700 text-lg mt-1 py-2 px-4"></i>
+                  <span className="text-white text-lg">
+                    Call Us Directly At
+                  </span>
+                </p>
+                <p className="text-4xl text-white font-semibold my-4">
+                  +91 999XXXXXXX
+                </p>
+                <a href="tel:+919992990399">
+                  <button className="bg-blue-500 text-white font-semibold py-2 mt-12 w-full rounded-xl">
+                    Call Now
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div className="px-8 text-center lg:text-left h-full">
+              <div className="px-12 py-6 bg-gray-300 rounded-2xl h-full">
+                <p className="flex items-center space-x-4 justify-center lg:justify-start w-full">
+                  <i className="fi fi-rs-envelope bg-white rounded-xl text-black text-lg mt-1 py-2 px-4"></i>
+                  <span className="text-black text-lg">
+                    Contact With Our Team
+                  </span>
+                </p>
+                <p className="text-base md:text-4xl text-black font-semibold my-4">
+                  support@objectindia.com
+                </p>
+                <a href="mailto:support@objectindia.com">
+                  <button className="bg-blue-500 text-black font-semibold py-2 mt-12 w-full rounded-xl">
+                    Contact Us
+                  </button>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -12,7 +12,7 @@ function CategoriesListingItems({ categoryName }) {
 
   return (
     <div className="justify-center flex p-8">
-      <div className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 xl:gap-4">
+      <div className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
         {categoriesListingData
           .filter(
             (item) =>

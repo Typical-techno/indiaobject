@@ -39,7 +39,7 @@ const categoriesListingData = [
     shortName: "RM",
   },
   {
-    id: 3,
+    id: 4,
     name: "Rohan Mehta",
     locationIcon: "fi-bs-globe",
     location: "Gujrat",
@@ -52,7 +52,7 @@ const categoriesListingData = [
     shortName: "RM",
   },
   {
-    id: 3,
+    id: 5,
     name: "Rohan Mehta",
     locationIcon: "fi-bs-globe",
     location: "Delhi",
@@ -65,7 +65,7 @@ const categoriesListingData = [
     shortName: "RM",
   },
   {
-    id: 3,
+    id: 6,
     name: "Rohan Mehta",
     locationIcon: "fi-bs-globe",
     location: "Delhi",
@@ -78,7 +78,7 @@ const categoriesListingData = [
     shortName: "RM",
   },
   {
-    id: 4,
+    id: 7,
     name: "Sakshi Gupta",
     locationIcon: "fi-bs-globe",
     location: "Mumbai Maharashtra",
@@ -91,7 +91,7 @@ const categoriesListingData = [
     shortName: "SG",
   },
   {
-    id: 5,
+    id: 8,
     name: "Karan Verma",
     locationIcon: "fi-bs-globe",
     location: "Bangalore Karnataka",
@@ -104,7 +104,7 @@ const categoriesListingData = [
     shortName: "KV",
   },
   {
-    id: 6,
+    id: 9,
     name: "Nisha Singh",
     locationIcon: "fi-bs-globe",
     location: "Chandigarh",
