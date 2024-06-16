@@ -21,7 +21,7 @@ function StartListingHome() {
               />
             </div>
             <button className="bg-blue-500 p-3 rounded-xl" type="submit">
-              <p className="text-base font-semibold">Get Started</p>
+              <p className="text-base text-white font-semibold">Get Started</p>
             </button>
           </form>
         </div>

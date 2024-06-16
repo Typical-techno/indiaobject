@@ -1,6 +1,7 @@
 import React from "react";
 import img2 from "../../assets/images/hero-vector-2.jpg";
 import SearchBox from "../../components/UI/SearchBox";
+import { searchItems } from "../../data/searchData";
 
 function Hero() {
   return (
@@ -19,7 +20,7 @@ function Hero() {
           </p>
         </div>
         <div className="space-y-4 z-10">
-          <SearchBox />
+          <SearchBox searchItems={searchItems} />
           <div>
             <p className="text-base font-semibold text-left p-4">
               Popular Search:

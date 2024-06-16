@@ -1,34 +1,10 @@
 import React, { useState } from "react";
 import DropdownFilter from "./DropdownFilter";
 
-function SearchBox() {
+function SearchBox({ searchItems }) {
   const [keyword, setKeyword] = useState("");
   const [category, setCategory] = useState("");
   const [where, setWhere] = useState("");
-
-  const searchItems = [
-    {
-      id: "keywords",
-      label: "Keywords",
-      placeholder: "What are you looking for?",
-      icon: "fi-bs-search",
-      border: "border-l-0",
-    },
-    {
-      id: "where",
-      label: "Where",
-      placeholder: "City or Pincode",
-      icon: "fi-bs-marker",
-      border: "border-l-2",
-    },
-    {
-      id: "category",
-      label: "Category",
-      placeholder: "Select Category",
-      icon: "fi-bs-category",
-      border: "border-l-2",
-    },
-  ];
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -77,7 +53,10 @@ function SearchBox() {
           </div>
         </label>
       ))}
-      <button type="submit" className="bg-blue-500 rounded-xl p-4 text-white min-w-36">
+      <button
+        type="submit"
+        className="bg-blue-500 rounded-xl p-4 text-white min-w-36"
+      >
         <div className="flex items-center justify-between">
           <p className="text-xl font-semibold">Search</p>
           <p className="text-base mt-1">

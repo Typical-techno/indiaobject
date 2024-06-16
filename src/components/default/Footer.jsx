@@ -12,7 +12,7 @@ function Footer() {
           <div className="space-y-6">
             <Link to="/">
               <button className="text-5xl font-bold">
-                <p className="flex items-center">
+                <p className="flex items-start md:items-center flex-col md:flex-row">
                   <span className="text-blue-500">Object</span>
                   India
                   <span className="text-blue-500 h-12 w-12">

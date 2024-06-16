@@ -3,6 +3,7 @@ import TopHeadNameBar from "../../components/UI/TopHeadNameBar";
 import { categoriesItems } from "../../data/categories";
 import { Link } from "react-router-dom";
 import SearchBox from "../../components/UI/SearchBox";
+import { searchItems } from "../../data/searchData";
 
 function CategoriesHome() {
   const [headName, setHeadName] = useState();
@@ -17,7 +18,7 @@ function CategoriesHome() {
       <TopHeadNameBar headName={headName} />
       <div className="flex justify-center my-12">
         <div>
-          <SearchBox />
+          <SearchBox searchItems={searchItems} />
         </div>
       </div>
       <div className="w-full flex justify-center">

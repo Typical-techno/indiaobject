@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import TopHeadNameBarCategories from "../../components/UI/TopHeadNameBarCategories";
 import CategoriesListingItems from "./CategoriesListingItems";
 import SearchBox from "../../components/UI/SearchBox";
+import { searchItems } from "../../data/searchData";
 
 function CategoriesSubListing() {
   const [headName, setHeadName] = useState();
@@ -19,7 +20,7 @@ function CategoriesSubListing() {
       <TopHeadNameBarCategories headName={headName} />
       <div className="flex justify-center my-12">
         <div>
-          <SearchBox />
+          <SearchBox searchItems={searchItems} />
         </div>
       </div>
       <div className="border flex justify-center">

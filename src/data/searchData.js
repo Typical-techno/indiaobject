@@ -83,4 +83,28 @@ const keywords = [
   "car cleaning",
 ];
 
-export { category, where, keywords };
+const searchItems = [
+  {
+    id: "keywords",
+    label: "Keywords",
+    placeholder: "What are you looking for?",
+    icon: "fi-bs-search",
+    border: "border-l-0",
+  },
+  {
+    id: "where",
+    label: "Where",
+    placeholder: "City or Pincode",
+    icon: "fi-bs-marker",
+    border: "border-l-2",
+  },
+  {
+    id: "category",
+    label: "Category",
+    placeholder: "Select Category",
+    icon: "fi-bs-category",
+    border: "border-l-2",
+  },
+];
+
+export { category, where, keywords,  searchItems };
