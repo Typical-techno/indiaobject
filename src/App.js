@@ -12,6 +12,7 @@ import LoginSignup from "./pages/Login-Signup/Login_Signup";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/default/scrollToTop";
 import CategoriesItemMainView from "./pages/Categories/CategoriesItemMainView";
+import AddListingForm from './pages/Add-Listing/AddListingForm'
 
 function App() {
   const location = useLocation();
@@ -33,10 +34,11 @@ function App() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/login" element={<LoginSignup />} />
           <Route path="/signup" element={<LoginSignup />} />
-          <Route path="*" element={<Navigate to="/not-found" replace />} />
           <Route path="/c" element={<Navigate to="/categories" replace />} />
+          <Route path="/s/:Id" element={<CategoriesItemMainView />} />
+          <Route path="/add-listing" element={<AddListingForm />} />
           <Route path="/not-found" element={<NotFound />} />
-          <Route path="/:Id" element={<CategoriesItemMainView/>} />
+          <Route path="*" element={<Navigate to="/not-found" replace />} />
         </Routes>
       </div>
       {!hideNavbarPaths.includes(location.pathname) && <Footer />}

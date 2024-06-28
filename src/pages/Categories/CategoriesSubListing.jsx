@@ -8,10 +8,7 @@ function CategoriesSubListing() {
   const [headName, setHeadName] = useState();
   const categoryName = window.location.pathname.replace("/c/", "");
   useEffect(() => {
-    let tempName = window.location.pathname.toUpperCase().replace("/C/", "");
-    while (tempName.includes("-")) {
-      tempName = tempName.replace("-", " ");
-    }
+    let tempName = window.location.pathname.replace("/c/", "");
     setHeadName(tempName);
   }, []);
 

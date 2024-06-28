@@ -1,15 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import categoriesListingData from "../../data/categoriesListingData";
 import { Link } from "react-router-dom";
 
 function CategoriesListingItems({ categoryName }) {
+  const [paramsLocation, setParamsLocation] = useState("");
+  const [paramsKeyword, setParamsKeyword] = useState("");
+
   useEffect(() => {
     const url = new URL(window.location.href);
     const params = new URLSearchParams(url.search);
-    const keyword = params.get("keyword");
-    const location = params.get("location");
-    console.log(keyword + location);
+    setParamsKeyword(params.get("keyword"));
+    setParamsLocation(params.get("location"));
   }, []);
+  console.log(paramsKeyword + paramsLocation);
 
   return (
     <div className="justify-center flex p-8">
@@ -17,11 +20,12 @@ function CategoriesListingItems({ categoryName }) {
         {categoriesListingData
           .filter(
             (item) =>
-              item.category === categoryName ||
+              (item.category === categoryName &&
+                item.location === paramsLocation) ||
               window.location.href.includes("all-categories")
           )
           .map((items) => (
-            <Link to={`/${items.id}`}>
+            <Link to={`/s/${items.id}`}>
               <button>
                 <div className="border border-black overflow-hidden rounded-xl hover:scale-110 duration-300 hover:shadow-2xl">
                   <div className="overflow-hidden">

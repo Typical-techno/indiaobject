@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import DropdownFilter from "./DropdownFilter";
+import { keywords, shopCategory, whereLocation } from "../../data/searchData";
 
 function SearchBox({ searchItems }) {
   const [keyword, setKeyword] = useState("");
@@ -32,6 +33,9 @@ function SearchBox({ searchItems }) {
           <div className="flex items-center w-full gap-4 border-0 justify-between">
             {/* <input placeholder={items.placeholder} className="focus:outline-none" /> */}
             <DropdownFilter
+              keywords={keywords}
+              where={whereLocation}
+              category={shopCategory}
               placeholder={items.placeholder}
               id={items.id}
               onSelect={(value) => {

@@ -9,7 +9,7 @@ function CategoriesHome() {
   const [headName, setHeadName] = useState();
 
   useEffect(() => {
-    let tempName = window.location.pathname.toUpperCase().replace("/", "");
+    let tempName = window.location.pathname.replace("/", "");
     setHeadName(tempName);
   }, []);
 

@@ -2,7 +2,7 @@ const categoriesListingData = [
   {
     id: 1,
     name: "Shubham Jangra",
-    description: "Description for the shop",
+    description: 'description for shops',
     locationIcon: "fi-bs-globe",
     location: "Rohtak Haryana",
     phoneIcon: "fi-bs-phone-call",
@@ -10,7 +10,8 @@ const categoriesListingData = [
     rating: 4.5,
     ratingPerson: 8,
     category: "bakery",
-    image: [
+    image: "feature-1.jpg",
+    imageAdditional: [
       "https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630",
       "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
       "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
@@ -32,7 +33,7 @@ const categoriesListingData = [
   {
     id: 2,
     name: "Ankita Sharma",
-    description: "Description for the shop",
+    description: 'description for shops',
     locationIcon: "fi-bs-globe",
     location: "Gurgaon Haryana",
     phoneIcon: "fi-bs-phone-call",
@@ -40,11 +41,14 @@ const categoriesListingData = [
     rating: 4.8,
     ratingPerson: 15,
     category: "bakery",
-    image: [
+    image: "feature-1.jpg",
+    imageAdditional: [
       "https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630",
       "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
+      "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
+      "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
     ],
-    shortName: "AS",
+    shortName: "SJ",
     availabilityTiming: [
       {
         Monday: "11AM - 12PM",
@@ -52,15 +56,15 @@ const categoriesListingData = [
         Wednesday: "11AM - 12PM",
         Thrusday: "11AM - 12PM",
         Friday: "11AM - 12PM",
-        Saturday: "11AM - 12PM",
-        Sunday: "11AM - 12PM",
+        Saturday: "closed",
+        Sunday: "closed",
       },
     ],
   },
   {
     id: 3,
     name: "Rohan Mehta",
-    description: "Description for the shop",
+    description: 'description for shops',
     locationIcon: "fi-bs-globe",
     location: "Delhi",
     phoneIcon: "fi-bs-phone-call",
@@ -68,11 +72,14 @@ const categoriesListingData = [
     rating: 4.0,
     ratingPerson: 10,
     category: "advocate-lawyers",
-    image: [
+    image: "feature-1.jpg",
+    imageAdditional: [
       "https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630",
       "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
+      "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
+      "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
     ],
-    shortName: "RM",
+    shortName: "SJ",
     availabilityTiming: [
       {
         Monday: "11AM - 12PM",
@@ -80,15 +87,15 @@ const categoriesListingData = [
         Wednesday: "11AM - 12PM",
         Thrusday: "11AM - 12PM",
         Friday: "11AM - 12PM",
-        Saturday: "11AM - 12PM",
-        Sunday: "11AM - 12PM",
+        Saturday: "closed",
+        Sunday: "closed",
       },
     ],
   },
   {
     id: 4,
     name: "Rohan Mehta",
-    description: "Description for the shop",
+    description: 'description for shops',
     locationIcon: "fi-bs-globe",
     location: "Gujrat",
     phoneIcon: "fi-bs-phone-call",
@@ -96,11 +103,14 @@ const categoriesListingData = [
     rating: 4.0,
     ratingPerson: 10,
     category: "advocate-lawyers",
-    image: [
+    image: "feature-1.jpg",
+    imageAdditional: [
       "https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630",
       "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
+      "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
+      "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
     ],
-    shortName: "RM",
+    shortName: "SJ",
     availabilityTiming: [
       {
         Monday: "11AM - 12PM",
@@ -108,15 +118,15 @@ const categoriesListingData = [
         Wednesday: "11AM - 12PM",
         Thrusday: "11AM - 12PM",
         Friday: "11AM - 12PM",
-        Saturday: "11AM - 12PM",
-        Sunday: "11AM - 12PM",
+        Saturday: "closed",
+        Sunday: "closed",
       },
     ],
   },
   {
     id: 5,
     name: "Rohan Mehta",
-    description: "Description for the shop",
+    description: 'description for shops',
     locationIcon: "fi-bs-globe",
     location: "Delhi",
     phoneIcon: "fi-bs-phone-call",
@@ -124,11 +134,14 @@ const categoriesListingData = [
     rating: 4.0,
     ratingPerson: 10,
     category: "advocate-lawyers",
-    image: [
+    image: "feature-1.jpg",
+    imageAdditional: [
       "https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630",
       "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
+      "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
+      "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
     ],
-    shortName: "RM",
+    shortName: "SJ",
     availabilityTiming: [
       {
         Monday: "11AM - 12PM",
@@ -136,15 +149,15 @@ const categoriesListingData = [
         Wednesday: "11AM - 12PM",
         Thrusday: "11AM - 12PM",
         Friday: "11AM - 12PM",
-        Saturday: "11AM - 12PM",
-        Sunday: "11AM - 12PM",
+        Saturday: "closed",
+        Sunday: "closed",
       },
     ],
   },
   {
     id: 6,
     name: "Rohan Mehta",
-    description: "Description for the shop",
+    description: 'description for shops',
     locationIcon: "fi-bs-globe",
     location: "Delhi",
     phoneIcon: "fi-bs-phone-call",
@@ -152,11 +165,14 @@ const categoriesListingData = [
     rating: 4.0,
     ratingPerson: 10,
     category: "advocate-lawyers",
-    image: [
+    image: "feature-1.jpg",
+    imageAdditional: [
       "https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630",
       "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
+      "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
+      "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
     ],
-    shortName: "RM",
+    shortName: "SJ",
     availabilityTiming: [
       {
         Monday: "11AM - 12PM",
@@ -164,15 +180,15 @@ const categoriesListingData = [
         Wednesday: "11AM - 12PM",
         Thrusday: "11AM - 12PM",
         Friday: "11AM - 12PM",
-        Saturday: "11AM - 12PM",
-        Sunday: "11AM - 12PM",
+        Saturday: "closed",
+        Sunday: "closed",
       },
     ],
   },
   {
     id: 7,
     name: "Sakshi Gupta",
-    description: "Description for the shop",
+    description: 'description for shops',
     locationIcon: "fi-bs-globe",
     location: "Mumbai Maharashtra",
     phoneIcon: "fi-bs-phone-call",
@@ -180,11 +196,14 @@ const categoriesListingData = [
     rating: 3.9,
     ratingPerson: 12,
     category: "banks",
-    image: [
+    image: "feature-1.jpg",
+    imageAdditional: [
       "https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630",
       "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
+      "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
+      "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
     ],
-    shortName: "SG",
+    shortName: "SJ",
     availabilityTiming: [
       {
         Monday: "11AM - 12PM",
@@ -192,15 +211,15 @@ const categoriesListingData = [
         Wednesday: "11AM - 12PM",
         Thrusday: "11AM - 12PM",
         Friday: "11AM - 12PM",
-        Saturday: "11AM - 12PM",
-        Sunday: "11AM - 12PM",
+        Saturday: "closed",
+        Sunday: "closed",
       },
     ],
   },
   {
     id: 8,
     name: "Karan Verma",
-    description: "Description for the shop",
+    description: 'description for shops',
     locationIcon: "fi-bs-globe",
     location: "Bangalore Karnataka",
     phoneIcon: "fi-bs-phone-call",
@@ -208,11 +227,14 @@ const categoriesListingData = [
     rating: 4.7,
     ratingPerson: 18,
     category: "banquets-hall",
-    image: [
+    image: "feature-1.jpg",
+    imageAdditional: [
       "https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630",
       "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
+      "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
+      "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
     ],
-    shortName: "KV",
+    shortName: "SJ",
     availabilityTiming: [
       {
         Monday: "11AM - 12PM",
@@ -220,15 +242,15 @@ const categoriesListingData = [
         Wednesday: "11AM - 12PM",
         Thrusday: "11AM - 12PM",
         Friday: "11AM - 12PM",
-        Saturday: "11AM - 12PM",
-        Sunday: "11AM - 12PM",
+        Saturday: "closed",
+        Sunday: "closed",
       },
     ],
   },
   {
     id: 9,
     name: "Nisha Singh",
-    description: "Description for the shop",
+    description: 'description for shops',
     locationIcon: "fi-bs-globe",
     location: "Chandigarh",
     phoneIcon: "fi-bs-phone-call",
@@ -236,11 +258,14 @@ const categoriesListingData = [
     rating: 4.2,
     ratingPerson: 11,
     category: "book-stationery-shops",
-    image: [
+    image: "feature-1.jpg",
+    imageAdditional: [
       "https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630",
       "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
+      "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
+      "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg",
     ],
-    shortName: "NS",
+    shortName: "SJ",
     availabilityTiming: [
       {
         Monday: "11AM - 12PM",
@@ -248,8 +273,8 @@ const categoriesListingData = [
         Wednesday: "11AM - 12PM",
         Thrusday: "11AM - 12PM",
         Friday: "11AM - 12PM",
-        Saturday: "11AM - 12PM",
-        Sunday: "11AM - 12PM",
+        Saturday: "closed",
+        Sunday: "closed",
       },
     ],
   },

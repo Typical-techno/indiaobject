@@ -1,4 +1,4 @@
-const category = [
+const shopCategory = [
   "All Categories",
   "Advocate lawyers",
   "Bakery",
@@ -6,7 +6,7 @@ const category = [
   "Banquets hall",
   "Book stationery shops",
   "Boutiques",
-  "Building material dealers=",
+  "Building material dealers",
   "Cctv dealers",
   "Chartered accountant",
   "Clothes",
@@ -47,7 +47,7 @@ const category = [
   "App developer",
 ];
 
-const where = [
+const whereLocation = [
   "Mumbai",
   "Delhi",
   "Bangalore",
@@ -107,4 +107,4 @@ const searchItems = [
   },
 ];
 
-export { category, where, keywords,  searchItems };
+export { shopCategory, whereLocation, keywords,  searchItems };

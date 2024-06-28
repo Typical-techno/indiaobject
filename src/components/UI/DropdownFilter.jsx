@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { category, keywords, where } from "../../data/searchData";
 
-const DropdownFilter = ({ placeholder, id, onSelect }) => {
+const DropdownFilter = ({ placeholder, id, onSelect, keywords, category, where }) => {
   const [inputValue, setInputValue] = useState("");
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [dropItem, setDropItem] = useState();
