@@ -239,7 +239,7 @@ export default function AddListingForm() {
       labelId: "shopLandmark",
       title: "Landmark",
       type: "text",
-      required: false,
+      required: true,
       helperText: "Please provide a landmark near the shop.",
       value: shopLocationDetails.shopLandmark,
       section: "shopLocationDetails",
@@ -249,7 +249,7 @@ export default function AddListingForm() {
       labelId: "shopBuildingNumber",
       title: "Building Number",
       type: "text",
-      required: false,
+      required: true,
       helperText: "Please provide the building number, if any.",
       value: shopLocationDetails.shopBuildingNumber,
       section: "shopLocationDetails",
@@ -259,7 +259,7 @@ export default function AddListingForm() {
       labelId: "shopFloorNumber",
       title: "Floor Number",
       type: "text",
-      required: false,
+      required: true,
       helperText: "Please provide the floor number, if any.",
       value: shopLocationDetails.shopFloorNumber,
       section: "shopLocationDetails",
@@ -325,7 +325,7 @@ export default function AddListingForm() {
       labelId: "mondayTiming",
       title: "Monday",
       type: "text",
-      required: false,
+      required: true,
       helperText: "Please enter the shop's Monday opening hours.",
       value: shopTimingDetails.mondayTiming,
       section: "shopTimingDetails",
@@ -335,7 +335,7 @@ export default function AddListingForm() {
       labelId: "tuesdayTiming",
       title: "Tuesday",
       type: "text",
-      required: false,
+      required: true,
       helperText: "Please enter the shop's Tuesday opening hours.",
       value: shopTimingDetails.tuesdayTiming,
       section: "shopTimingDetails",
@@ -345,7 +345,7 @@ export default function AddListingForm() {
       labelId: "wednesdayTiming",
       title: "Wednesday",
       type: "text",
-      required: false,
+      required: true,
       helperText: "Please enter the shop's Wednesday opening hours.",
       value: shopTimingDetails.wednesdayTiming,
       section: "shopTimingDetails",
@@ -355,7 +355,7 @@ export default function AddListingForm() {
       labelId: "thursdayTiming",
       title: "Thursday",
       type: "text",
-      required: false,
+      required: true,
       helperText: "Please enter the shop's Thursday opening hours.",
       value: shopTimingDetails.thursdayTiming,
       section: "shopTimingDetails",
@@ -365,7 +365,7 @@ export default function AddListingForm() {
       labelId: "fridayTiming",
       title: "Friday",
       type: "text",
-      required: false,
+      required: true,
       helperText: "Please enter the shop's Friday opening hours.",
       value: shopTimingDetails.fridayTiming,
       section: "shopTimingDetails",
@@ -375,7 +375,7 @@ export default function AddListingForm() {
       labelId: "saturdayTiming",
       title: "Saturday",
       type: "text",
-      required: false,
+      required: true,
       helperText: "Please enter the shop's Saturday opening hours.",
       value: shopTimingDetails.saturdayTiming,
       section: "shopTimingDetails",
@@ -385,7 +385,7 @@ export default function AddListingForm() {
       labelId: "sundayTiming",
       title: "Sunday",
       type: "text",
-      required: false,
+      required: true,
       helperText: "Please enter the shop's Sunday opening hours.",
       value: shopTimingDetails.sundayTiming,
       section: "shopTimingDetails",
@@ -546,7 +546,7 @@ export default function AddListingForm() {
     labelId: "mapLocation",
     title: "Map Location",
     type: "text",
-    required: false,
+    required: true,
     helperText: "Please provide the shop's map location.",
     value: mapLocation,
     section: "mapLocation",
@@ -555,15 +555,15 @@ export default function AddListingForm() {
 
   const taglineField = {
     labelId: "tagline",
-    title: "Tagline",
+    title: "Add Keyword",
     type: "text",
-    required: false,
+    required: true,
     helperText: "Please provide a tagline for the shop.",
     value: tagline,
     section: "tagline",
     field: "tagline",
   };
-  console.log(shopLocationDetails);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -632,7 +632,7 @@ export default function AddListingForm() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/panelListing/create",
+        "https://tm95qzfh-5000.inc1.devtunnels.ms/api/panelListing/create",
         requestData,
         {
           headers: {
@@ -641,6 +641,7 @@ export default function AddListingForm() {
         }
       );
       console.log("Response:", response.data);
+      window.location.reload();
     } catch (error) {
       console.error("Error submitting form:", error);
     }
@@ -1029,6 +1030,7 @@ export default function AddListingForm() {
                       type="file"
                       className="hidden"
                       accept=".png, .jpg, .jpeg"
+                      required
                       onChange={(e) =>
                         handleFileChange(`image${index + 1}`, e.target.files[0])
                       }

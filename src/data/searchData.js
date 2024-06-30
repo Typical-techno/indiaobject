@@ -1,4 +1,5 @@
 const shopCategory = [
+  "",
   "All Categories",
   "Advocate lawyers",
   "Bakery",
