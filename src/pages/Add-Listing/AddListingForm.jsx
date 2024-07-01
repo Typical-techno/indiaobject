@@ -589,6 +589,7 @@ export default function AddListingForm() {
           headers: {
             "Content-Type": "multipart/form-data",
           },
+          timeout: 30000,
         }
       );
       setShowSuccessAlert(true);
