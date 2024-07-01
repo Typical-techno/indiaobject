@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:5000/api/',
+  baseURL: 'https://objectindia-backend.onrender.com/api/',
   timeout: 10000,
   withCredentials: true, // Ensure credentials are sent with CORS requests
 });
