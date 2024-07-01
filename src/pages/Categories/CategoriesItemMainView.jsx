@@ -12,13 +12,13 @@ function CategoriesItemMainView() {
   );
   return (
     <div className="py-24">
-      {itemsFilter.map((items) => (
-        <TopHeadNameBarItemsMain items={items} />
+      {itemsFilter.map((items, index) => (
+        <TopHeadNameBarItemsMain key={index} items={items} />
       ))}
       <div className="w-full flex justify-center">
         <div className="container mx-auto p-4 md:p-20 antialiased space-x-0 md:space-x-12 space-y-8 md:space-y-0 flex flex-col md:flex-row items-center">
           {itemsFilter.map((items, index) => (
-            <div className="justify-center flex flex-wrap md:flex-wrap shadow-lg w-full md:w-7/12 mx-auto group cursor-pointer transform duration-500 border">
+            <div key={index} className="justify-center flex flex-wrap md:flex-wrap shadow-lg w-full md:w-7/12 mx-auto group cursor-pointer transform duration-500 border">
               <ImageSimpleSlider images={items.imageAdditional} />
               <div className="text-left w-full">
                 <div className="p-5">

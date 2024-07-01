@@ -64,7 +64,7 @@ function SearchBox({ searchItems }) {
         <div className="flex items-center justify-between">
           <p className="text-xl font-semibold">Search</p>
           <p className="text-base mt-1">
-            <i class="fi fi-br-search"></i>
+            <i className="fi fi-br-search"></i>
           </p>
         </div>
       </button>

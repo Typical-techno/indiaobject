@@ -19,14 +19,14 @@ function Categories() {
           <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 w-full">
             {categoriesItems
               .filter((item) => item.visibleScreen === "Home")
-              .map((filteredItems) => (
-                <button className="p-8">
+              .map((filteredItems, index) => (
+                <button key={index} className="p-8">
                   <Link to={`/c/${filteredItems.category}`}>
                     <div
                       className={`w-full h-full flex flex-col rounded-xl p-4 space-y-3 hover:bg-gray-100 hover:text-blue-500 duration-150 hover:scale-110 hover:${filteredItems.hover}`}
                     >
                       <p className="text-4xl items-center justify-center h-full flex">
-                        <i class={`fi ${filteredItems.icon}`}></i>
+                        <i className={`fi ${filteredItems.icon}`}></i>
                       </p>
                       <p className="text-sm md:text-xl font-semibold items-center">
                         {filteredItems.label}

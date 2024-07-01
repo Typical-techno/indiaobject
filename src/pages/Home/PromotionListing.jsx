@@ -18,8 +18,8 @@ function PromotionListing() {
             </p>
           </div>
           <button className="w-fit grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 xl:gap-4">
-            {promotionListingData.map((items) => (
-              <div className="border border-black overflow-hidden rounded-xl hover:scale-110 duration-300 hover:shadow-2xl mx-8">
+            {promotionListingData.map((items, index) => (
+              <div key={index} className="border border-black overflow-hidden rounded-xl hover:scale-110 duration-300 hover:shadow-2xl mx-8">
                 <div className="overflow-hidden">
                   <img
                     src={require(`../../assets/images/${items.image}`)}

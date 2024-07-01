@@ -24,8 +24,8 @@ function CategoriesListingItems({ categoryName }) {
                 item.location === paramsLocation) ||
               window.location.href.includes("all-categories")
           )
-          .map((items) => (
-            <Link to={`/s/${items.id}`}>
+          .map((items, index) => (
+            <Link key={index} to={`/s/${items.id}`}>
               <button>
                 <div className="border border-black overflow-hidden rounded-xl hover:scale-110 duration-300 hover:shadow-2xl">
                   <div className="overflow-hidden">

@@ -26,43 +26,43 @@ function CategoriesSubListing() {
             <p className="text-xl font-semibold py-1">Filter</p>
             <div className="space-x-2 text-left text-yellow-500">
               <input type="checkbox" />
-              <i class="fi fi-sr-star"></i>
-              <i class="fi fi-sr-star"></i>
-              <i class="fi fi-sr-star"></i>
-              <i class="fi fi-sr-star"></i>
-              <i class="fi fi-sr-star"></i>
+              <i className="fi fi-sr-star"></i>
+              <i className="fi fi-sr-star"></i>
+              <i className="fi fi-sr-star"></i>
+              <i className="fi fi-sr-star"></i>
+              <i className="fi fi-sr-star"></i>
             </div>
             <div className="space-x-2 text-left text-yellow-500">
               <input type="checkbox" />
-              <i class="fi fi-sr-star"></i>
-              <i class="fi fi-sr-star"></i>
-              <i class="fi fi-sr-star"></i>
-              <i class="fi fi-sr-star"></i>
-              <i class="fi fi-rr-star"></i>
+              <i className="fi fi-sr-star"></i>
+              <i className="fi fi-sr-star"></i>
+              <i className="fi fi-sr-star"></i>
+              <i className="fi fi-sr-star"></i>
+              <i className="fi fi-rr-star"></i>
             </div>
             <div className="space-x-2 text-left text-yellow-500">
               <input type="checkbox" />
-              <i class="fi fi-sr-star"></i>
-              <i class="fi fi-sr-star"></i>
-              <i class="fi fi-sr-star"></i>
-              <i class="fi fi-rr-star"></i>
-              <i class="fi fi-rr-star"></i>
+              <i className="fi fi-sr-star"></i>
+              <i className="fi fi-sr-star"></i>
+              <i className="fi fi-sr-star"></i>
+              <i className="fi fi-rr-star"></i>
+              <i className="fi fi-rr-star"></i>
             </div>
             <div className="space-x-2 text-left text-yellow-500">
               <input type="checkbox" />
-              <i class="fi fi-sr-star"></i>
-              <i class="fi fi-sr-star"></i>
-              <i class="fi fi-rr-star"></i>
-              <i class="fi fi-rr-star"></i>
-              <i class="fi fi-rr-star"></i>
+              <i className="fi fi-sr-star"></i>
+              <i className="fi fi-sr-star"></i>
+              <i className="fi fi-rr-star"></i>
+              <i className="fi fi-rr-star"></i>
+              <i className="fi fi-rr-star"></i>
             </div>
             <div className="space-x-2 text-left text-yellow-500">
               <input type="checkbox" />
-              <i class="fi fi-sr-star"></i>
-              <i class="fi fi-rr-star"></i>
-              <i class="fi fi-rr-star"></i>
-              <i class="fi fi-rr-star"></i>
-              <i class="fi fi-rr-star"></i>
+              <i className="fi fi-sr-star"></i>
+              <i className="fi fi-rr-star"></i>
+              <i className="fi fi-rr-star"></i>
+              <i className="fi fi-rr-star"></i>
+              <i className="fi fi-rr-star"></i>
             </div>
           </div>
         </div>

@@ -8,7 +8,8 @@ import ContactUs from "./pages/Contact-us/ContactUs";
 import Pricing from "./pages/Pricing/Pricing";
 import CategoriesHome from "./pages/Categories/CategoriesHome";
 import CategoriesSubListing from "./pages/Categories/CategoriesSubListing";
-import LoginSignup from "./pages/Login-Signup/Login_Signup";
+import Login from "./pages/Auth/Login";
+import Signup from "./pages/Auth/Signup";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/default/scrollToTop";
 import CategoriesItemMainView from "./pages/Categories/CategoriesItemMainView";
@@ -32,8 +33,8 @@ function App() {
           <Route path="/categories" element={<CategoriesHome />} />
           <Route path="/c/:categoriesId" element={<CategoriesSubListing />} />
           <Route path="/pricing" element={<Pricing />} />
-          <Route path="/login" element={<LoginSignup />} />
-          <Route path="/signup" element={<LoginSignup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="/c" element={<Navigate to="/categories" replace />} />
           <Route path="/s/:Id" element={<CategoriesItemMainView />} />
           <Route path="/add-listing" element={<AddListingForm />} />

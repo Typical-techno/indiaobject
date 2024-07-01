@@ -33,8 +33,8 @@ function Footer() {
               </p>
             </div>
             <div className="flex items-center">
-              {socialLink.map((items) => (
-                <div className="flex flex-row">
+              {socialLink.map((items, index) => (
+                <div key={index} className="flex flex-row">
                   <a href={`${items.link}`}>
                     <button className="px-2">
                       <p className="text-3xl">
@@ -55,12 +55,12 @@ function Footer() {
             </p>
           </div>
           <div>
-            {useLink.map((items) => (
-              <div className="items-center mx-2 py-1">
+            {useLink.map((items, index) => (
+              <div key={index} className="items-center mx-2 py-1">
                 <Link to={`/${items.link}`}>
                   <div className="flex gap-2 items-center">
                     <p className="mt-1">
-                      <i class="fi fi-rr-angle-double-small-right"></i>
+                      <i className="fi fi-rr-angle-double-small-right"></i>
                     </p>
                     <p className="text-xs text-gray-300 md:text-base font-semibold">{items.linkName}</p>
                   </div>
@@ -76,12 +76,12 @@ function Footer() {
             </p>
           </div>
           <div>
-            {accLink.map((items) => (
-              <div className="items-center mx-2 py-1">
+            {accLink.map((items, index) => (
+              <div key={index} className="items-center mx-2 py-1">
                 <Link to={`/${items.link}`}>
                   <div className="flex gap-2 items-center">
                     <p className="mt-1">
-                      <i class="fi fi-rr-angle-double-small-right"></i>
+                      <i className="fi fi-rr-angle-double-small-right"></i>
                     </p>
                     <p className="text-xs text-gray-300 md:text-base font-semibold">{items.linkName}</p>
                   </div>
@@ -97,12 +97,12 @@ function Footer() {
             </p>
           </div>
           <div>
-            {contactLink.map((items) => (
-              <div className="items-center mx-2 py-1">
+            {contactLink.map((items, index) => (
+              <div key={index} className="items-center mx-2 py-1">
                 <a href={`${items.link}`}>
                   <div className="flex gap-2 items-center">
                     <p className="mt-1">
-                      <i class={`fi ${items.linkIcon}`}></i>
+                      <i className={`fi ${items.linkIcon}`}></i>
                     </p>
                     <p className="text-xs text-gray-300 md:text-base font-semibold">{items.linkName}</p>
                   </div>

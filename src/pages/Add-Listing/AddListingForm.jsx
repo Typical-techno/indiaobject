@@ -1,11 +1,19 @@
 import React, { useEffect, useState } from "react";
 import TopHeadNameBar from "../../components/UI/TopHeadNameBar";
 import { shopCategory } from "../../data/searchData";
+import Alert from "../../components/UI/Alert";
+import DOMPurify from "dompurify";
 import axios from "axios";
-import Compressor from "compressorjs";
+import axiosInstance from "../../config/securityInstance";
 
 export default function AddListingForm() {
   const [headName, setHeadName] = useState("");
+  const [showSuccessAlert, setShowSuccessAlert] = useState(false);
+  const [showFailedAlert, setShowFailedAlert] = useState(false);
+  // Assuming you receive the access token after a successful authentication
+  const accessToken = process.env.REACT_APP_BACK_JWT_TOKEN;
+  localStorage.setItem("accessToken", accessToken);
+
   const [ownerDetails, setOwnerDetails] = useState({
     ownerName: "",
     ownerPhoneNumber: "",
@@ -69,30 +77,40 @@ export default function AddListingForm() {
   const [tagline, setTagline] = useState("");
 
   const handleInputChange = (section, field, value) => {
+    const sanitizedValue = DOMPurify.sanitize(value);
     switch (section) {
       case "ownerDetails":
-        setOwnerDetails({ ...ownerDetails, [field]: value });
+        setOwnerDetails({ ...ownerDetails, [field]: sanitizedValue });
         break;
       case "shopDetails":
-        setShopDetails({ ...shopDetails, [field]: value });
+        setShopDetails({ ...shopDetails, [field]: sanitizedValue });
         break;
       case "shopLocationDetails":
-        setShopLocationDetails({ ...shopLocationDetails, [field]: value });
+        setShopLocationDetails({
+          ...shopLocationDetails,
+          [field]: sanitizedValue,
+        });
         break;
       case "shopSocialDetails":
-        setShopSocialDetails({ ...shopSocialDetails, [field]: value });
+        setShopSocialDetails({ ...shopSocialDetails, [field]: sanitizedValue });
         break;
       case "shopTimingDetails":
-        setShopTimingDetails({ ...shopTimingDetails, [field]: value });
+        setShopTimingDetails({ ...shopTimingDetails, [field]: sanitizedValue });
         break;
       case "categoriesSelection":
-        setCategoriesSelection({ ...categoriesSelection, [field]: value });
+        setCategoriesSelection({
+          ...categoriesSelection,
+          [field]: sanitizedValue,
+        });
         break;
       case "paymentAcceptedFields":
-        setPaymentAcceptedFields({ ...paymentAcceptedFields, [field]: value });
+        setPaymentAcceptedFields({
+          ...paymentAcceptedFields,
+          [field]: sanitizedValue,
+        });
         break;
       case "imagesFields":
-        setImagesFields({ ...imagesFields, [field]: value });
+        setImagesFields({ ...imagesFields, [field]: sanitizedValue });
         break;
       default:
         break;
@@ -518,30 +536,6 @@ export default function AddListingForm() {
     },
   ];
 
-  const imagesFieldsArray = [
-    {
-      labelId: "image1",
-      title: "Image 1",
-      type: "file",
-      value: imagesFields.image1,
-      field: "image1",
-    },
-    {
-      labelId: "image2",
-      title: "Image 2",
-      type: "file",
-      value: imagesFields.image2,
-      field: "image2",
-    },
-    {
-      labelId: "image3",
-      title: "Image 3",
-      type: "file",
-      value: imagesFields.image3,
-      field: "image3",
-    },
-  ];
-
   const mapLocationField = {
     labelId: "mapLocation",
     title: "Map Location",
@@ -564,52 +558,9 @@ export default function AddListingForm() {
     field: "tagline",
   };
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const formData = new FormData();
-
-    // Append owner details
-    formData.append("ownerDetails", JSON.stringify(ownerDetails));
-
-    // Append shop details
-    formData.append("shopDetails", JSON.stringify(shopDetails));
-
-    // Append shop location details
-    formData.append("shopLocationDetails", JSON.stringify(shopLocationDetails));
-
-    // Append shop social details
-    formData.append("shopSocialDetails", JSON.stringify(shopSocialDetails));
-
-    // Append shop timing details
-    formData.append("shopTimingDetails", JSON.stringify(shopTimingDetails));
-
-    // Append categories selection
-    formData.append("categoriesSelection", JSON.stringify(categoriesSelection));
-
-    // Append payment accepted fields
-    formData.append(
-      "paymentAcceptedFields",
-      JSON.stringify(paymentAcceptedFields)
-    );
-
-    // Append map location
-    formData.append("mapLocation", mapLocation);
-
-    // Append tagline
-    formData.append("tagline", tagline);
-
-    // Append images
-    if (imagesFields.img1) {
-      formData.append("img1", imagesFields.img1);
-    }
-    if (imagesFields.img2) {
-      formData.append("img2", imagesFields.img2);
-    }
-    if (imagesFields.img3) {
-      formData.append("img3", imagesFields.img3);
-    }
     const img1 = imagesFields.image1;
     const img2 = imagesFields.image2;
     const img3 = imagesFields.image3;
@@ -631,8 +582,8 @@ export default function AddListingForm() {
     console.log(requestData);
 
     try {
-      const response = await axios.post(
-        "https://tm95qzfh-5000.inc1.devtunnels.ms/api/panelListing/create",
+      const response = await axiosInstance.post(
+        "/panelListing/create",
         requestData,
         {
           headers: {
@@ -640,9 +591,16 @@ export default function AddListingForm() {
           },
         }
       );
+      setShowSuccessAlert(true);
+      setTimeout(() => {
+        setShowSuccessAlert(false);
+      }, 5000);
       console.log("Response:", response.data);
-      window.location.reload();
     } catch (error) {
+      setShowFailedAlert(true);
+      setTimeout(() => {
+        setShowFailedAlert(false);
+      }, 3000);
       console.error("Error submitting form:", error);
     }
   };
@@ -651,6 +609,10 @@ export default function AddListingForm() {
     <div className="pt-20 w-full">
       <TopHeadNameBar headName={headName} />
       <div className="w-full justify-center items-center flex px-0 xl:px-52">
+        {showSuccessAlert && <Alert message="Form submitted successfully!" />}
+        {showFailedAlert && (
+          <Alert message="Faced an ERROR while submitting Form" />
+        )}
         <form
           className="bg-blue-50 w-full justify-center flex flex-col py-12 gap-12"
           onSubmit={handleSubmit}
@@ -870,8 +832,10 @@ export default function AddListingForm() {
                       )
                     }
                   >
-                    {shopCategory.map((items) => (
-                      <option className="rounded-b-lg">{items}</option>
+                    {shopCategory.map((items, index) => (
+                      <option key={index} className="rounded-b-lg">
+                        {items}
+                      </option>
                     ))}
                   </select>
                 </div>

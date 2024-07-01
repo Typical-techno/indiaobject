@@ -131,8 +131,8 @@ function Navbar() {
         </div>
       </div>
       <div className="hidden xl:flex justify-center items-center">
-        {navItems.map((items) => (
-          <div className="items-center">
+        {navItems.map((items, index) => (
+          <div key={index} className="items-center">
             <Link to={`/${items.link}`}>
               <button className="flex flex-row space-x-4 p-2">
                 <p className="mt-1">
@@ -145,12 +145,12 @@ function Navbar() {
         ))}
       </div>
       <div className="hidden md:flex justify-center items-center">
-        {btnItems.map((items) => (
-          <Link to={`/${items.link}`}>
+        {btnItems.map((items, index) => (
+          <Link key={index} to={`/${items.link}`}>
             <button className="rounded bg-blue-500 p-3 m-2 hover:text-blue-500 hover:bg-white text-white hover:border-blue-500 border">
               <div className="flex space-x-4 items-center">
                 <p className="mt-1">
-                  <i class={`fi ${items.icon}`}></i>
+                  <i className={`fi ${items.icon}`}></i>
                 </p>
                 <p className="font-semibold">{items.itemName}</p>
               </div>
@@ -162,13 +162,16 @@ function Navbar() {
         {open ? (
           <div className="border border-[#1A2238] my-4 rounded-xl items-center flex flex-col w-screen h-screen animate-slide-in-left duration-150">
             <div className="py-4 flex justify-center items-center">
-              {btnItems.map((items) => (
-                <div className="flex flex-col justify-center items-center w-full">
+              {btnItems.map((items, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col justify-center items-center w-full"
+                >
                   <Link to={`/${items.link}`}>
                     <button className="rounded bg-blue-500 p-3 m-2 hover:text-blue-500 hover:bg-white text-white hover:border-blue-500 border">
                       <div className="flex space-x-4 items-center">
                         <p className="mt-1">
-                          <i class={`fi ${items.icon}`}></i>
+                          <i className={`fi ${items.icon}`}></i>
                         </p>
                         <p className="text-xs md:text-base font-semibold">
                           {items.itemName}
@@ -180,14 +183,18 @@ function Navbar() {
               ))}
             </div>
             <div className="py-8 space-y-8 px-4 w-full">
-              {navItems.map((items) => (
+              {navItems.map((items, index) => (
                 <Link
+                  key={index}
                   to={`/${items.link}`}
                   className={`flex flex-col border w-full border-blue-500 justify-center active rounded-xl items-center ${items.activeCss}`}
                 >
-                  <button onClick={()=>{
-                    setOpen(false);
-                  }} className="items-center">
+                  <button
+                    onClick={() => {
+                      setOpen(false);
+                    }}
+                    className="items-center"
+                  >
                     <div className="flex flex-row space-x-4 p-2 items-center">
                       <p className="mt-1">
                         <i className={`fi ${items.icon}`}></i>
