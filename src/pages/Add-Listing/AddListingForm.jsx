@@ -171,7 +171,7 @@ export default function AddListingForm() {
       labelId: "ownerEmailAddress",
       title: "Email Address",
       type: "email",
-      required: true,
+      required: false,
       helperText: "Please enter the owner's email address.",
       value: ownerDetails.ownerEmailAddress,
       section: "ownerDetails",
@@ -267,7 +267,7 @@ export default function AddListingForm() {
       labelId: "shopBuildingNumber",
       title: "Building Number",
       type: "text",
-      required: true,
+      required: false,
       helperText: "Please provide the building number, if any.",
       value: shopLocationDetails.shopBuildingNumber,
       section: "shopLocationDetails",
@@ -277,7 +277,7 @@ export default function AddListingForm() {
       labelId: "shopFloorNumber",
       title: "Floor Number",
       type: "text",
-      required: true,
+      required: false,
       helperText: "Please provide the floor number, if any.",
       value: shopLocationDetails.shopFloorNumber,
       section: "shopLocationDetails",
@@ -610,9 +610,9 @@ export default function AddListingForm() {
     <div className="pt-20 w-full">
       <TopHeadNameBar headName={headName} />
       <div className="w-full justify-center items-center flex px-0 xl:px-52">
-        {showSuccessAlert && <Alert message="Form submitted successfully!" />}
+        {showSuccessAlert && <Alert bg={"bg-green-100"} text={"text-green-700"} border={"border-green-400"} message="Form submitted successfully!" />}
         {showFailedAlert && (
-          <Alert message="Faced an ERROR while submitting Form" />
+          <Alert bg={"bg-rose-100"} text={"text-rose-700"} border={"border-rose-400"} message="Faced an ERROR while submitting Form" />
         )}
         <form
           className="bg-blue-50 w-full justify-center flex flex-col py-12 gap-12"

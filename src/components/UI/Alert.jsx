@@ -1,12 +1,13 @@
 import React from "react";
 
-const Alert = ({ message }) => {
+const Alert = ({ message, bg, text, border }) => {
   return (
     <div className="fixed top-24 right-12 animate-slide-in-left">
       <div
-        className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative"
+        className={`${bg} border ${border} ${text} px-4 py-3 rounded relative`}
         role="alert"
       >
+
         <strong className="font-bold">Success!{" "}</strong>
         <span className="block sm:inline">{message}</span>
       </div>
