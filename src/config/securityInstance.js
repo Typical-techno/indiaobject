@@ -1,10 +1,11 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: process.env.REACT_APP_API_URL,
+  baseURL: 'https://objectindia-backend.onrender.com/api/',
   timeout: 10000,
   withCredentials: true, // Ensure credentials are sent with CORS requests
 });
+
 // Function to retrieve CSRF token from cookies
 const getCookie = (name) => {
   const value = `; ${document.cookie}`;
